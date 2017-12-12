@@ -1,0 +1,8 @@
+<application>
+  <component name="ToolbarClicksCollector">
+    <counts>
+      <entry action="Run@NavBarToolbar" count="1" />
+      <entry action="com.intellij.ui.CommonActionsPanel$MyActionButton@ToolbarDecorator" count="1" />
+    </counts>
+  </component>
+</application>
