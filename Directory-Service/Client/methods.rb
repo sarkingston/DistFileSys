@@ -1,0 +1,1 @@
+def post_file_add_by_name(excon,name)excon.request(:method=>:post,:path=>"/file/add/#{name}",:headers=>{},:body=>nil)end;def get_file_get_by_name(excon,name)excon.request(:method=>:get,:path=>"/file/get/#{name}",:headers=>{},:body=>nil)end;def get_addcluster_by_ip_by_port(excon,ip,port)excon.request(:method=>:get,:path=>"/addcluster/#{ip}/#{port}",:headers=>{},:body=>nil)end

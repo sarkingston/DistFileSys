@@ -1,0 +1,55 @@
+name:                Auth-Server
+version:             0.1.0.0
+synopsis:            Initial project template from stack
+description:         Please see README.md
+homepage:            https://github.com/githubuser/Auth-Server#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2016 Author name here
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Api
+                     , App
+                     , Models
+  build-depends:       base >= 4.7 && < 5
+                     , aeson >= 0.11.2.1
+                     , monad-logger
+                     , persistent
+                     , persistent-template >= 2.5.1.6
+                     , persistent-sqlite
+                     , servant
+                     , servant-server
+                     , string-conversions
+                     , text >= 1.2.2.1
+                     , transformers
+                     , wai
+                     , warp
+  default-language:    Haskell2010
+
+executable Auth-Server-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                     , Auth-Server
+  default-language:    Haskell2010
+
+test-suite Auth-Server-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , Auth-Server
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/Auth-Server
